@@ -25,6 +25,7 @@ contract LotteryLatest{
 
     modifier restricted() {
         require(msg.sender == manager);
+        _;
     }
 
     function getPlayers() public view return(address payable[] memory){
